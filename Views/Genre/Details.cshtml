@@ -1,0 +1,30 @@
+﻿@model MyTermProject.Models.Genre
+
+@{
+    ViewData["Title"] = "Genre Details";
+}
+
+<h1 class="p-5 mb-2 shadow" style="background-color:lightpink; border-radius:20px;">Genre Details</h1>
+
+<div>
+    <<h4 class="p-2">Genre Information</h4>
+    <hr />
+    <dl class="row p-3">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.GenreId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
